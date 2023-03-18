@@ -1,0 +1,23 @@
+nav {
+    margin-top: 1rem;
+    color: black;
+}
+
+ul {
+    width: 60%;
+    margin: auto;
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav li {
+    display: inline-block;
+    padding-right: 3rem;
+    margin-top: 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+}

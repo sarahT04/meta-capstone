@@ -1,0 +1,37 @@
+#specials {
+    width: fit-content;
+    padding: 5rem;
+    margin: auto;
+}
+
+#specials > h2 {
+    margin-bottom: 1rem;
+}
+
+#specials-wrapper {
+    display: flex;
+    gap: 2rem;
+}
+
+.specials-description {
+    margin-top: 10px;
+    width: 320px;
+    text-align: justify;
+}
+
+.price {
+    float: right;
+}
+
+.specials-card>img {
+    object-fit: cover;
+    width: 320px;
+    height: 266px;
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 720px) {
+    #specials-wrapper {
+        flex-direction: column;
+    }
+}

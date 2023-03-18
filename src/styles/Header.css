@@ -1,0 +1,22 @@
+header {
+    display: flex;
+    gap: 10rem;
+    background-color: transparent;
+    width: fit-content;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+#hero-description {
+    position: relative;
+}
+
+#hero-description button {
+    position: absolute;
+    bottom: 0;
+}
+
+#hero-description > h4 {
+    width: 350px;
+    margin-top: 1rem;
+}
