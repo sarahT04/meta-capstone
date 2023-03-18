@@ -3,7 +3,7 @@ nav {
     color: black;
 }
 
-ul {
+nav ul {
     width: 60%;
     margin: auto;
     display: inline-flex;
@@ -13,11 +13,17 @@ ul {
 
 nav li {
     display: inline-block;
-    padding-right: 3rem;
-    margin-top: 1rem;
 }
 
 .nav-link {
     text-decoration: none;
     color: black;
+}
+
+
+@media screen and (max-width: 720px) {
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
 }

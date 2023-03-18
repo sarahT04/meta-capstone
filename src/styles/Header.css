@@ -13,10 +13,20 @@ header {
 
 #hero-description button {
     position: absolute;
-    bottom: 0;
+    bottom: -20px;
 }
 
-#hero-description > h4 {
-    width: 350px;
+#hero-description>h4 {
+    width: 285px;
     margin-top: 1rem;
+}
+
+@media screen and (max-width: 720px) {
+    header>img {
+        display: none;
+    }
+
+    #hero-description {
+        height: 400px;
+    }
 }

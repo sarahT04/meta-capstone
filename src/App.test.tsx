@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import BookingPage, { initializeTimes, updateTimes } from './Booking';
 
 // pay attention to write it at the top level of your file
@@ -20,9 +20,9 @@ interface Actions {
 const texts: string[] = [
   "Contact Information",
   "Reservation Date and Time",
-  "Number of People",
+  "Number of people",
   "Additional Information",
-  "Please notice that",
+  "Please notice that...",
 ];
 
 const expectedAction: string[] = [
@@ -39,7 +39,7 @@ const actions: Actions[] = [
   { type: "GET DATE", data: new Date(1677566972450), expected: expectedAction },
 ]
 
-test.skip('Checks if texts in booking form.', () => {
+test('Checks if texts in booking form.', () => {
   render(<BookingPage />);
   texts.forEach((text) => {
     const element = screen.getByText(text);
@@ -61,6 +61,14 @@ test('Checks for time updates', () => {
   })
 })
 
-test('Check if redirect after submitting form data', () => {
-  
+test("Checks if redirects after all field is filled", () => {
+  render(<BookingPage />)
+  const nameElement = screen.getByPlaceholderText("John Doe");
+  const emailElement = screen.getByPlaceholderText("foo@bar.com");
+  fireEvent.change(nameElement, { target: { value: 'John Doe' } })
+  fireEvent.change(emailElement, { target: { value: 'foo@bar.com' } })
+  const reserveButton = screen.getByTitle("Reserve")
+  fireEvent.click(reserveButton);
+  const confirmationButton = screen.getByText('All correct');
+  fireEvent.click(confirmationButton);
 })

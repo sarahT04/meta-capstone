@@ -95,10 +95,14 @@ export default function BookingForm({ submitFormData, availableTimes, setDates }
                     {/* Name and email */}
                     <div className="container">
                         <h1 className="lead-text mb-12">Contact Information</h1>
-                        <h3 className="paragraph">Name</h3>
+                        <label htmlFor='name'>
+                            <h3 className="paragraph">Name</h3>
+                        </label>
                         <Field type="text" name="name" placeholder="John Doe" className="form-input paragraph" />
                         <ErrorMessage name="name" component="div" className='error-text' />
-                        <h3 className="paragraph mt-12">Email</h3>
+                        <label htmlFor='email'>
+                            <h3 className="paragraph mt-12">Email</h3>
+                        </label>
                         <Field type="email" name="email" placeholder="foo@bar.com" className="form-input paragraph" />
                         <ErrorMessage name="email" component="div" className='error-text' />
                         {/* Date and time */}
@@ -128,7 +132,7 @@ export default function BookingForm({ submitFormData, availableTimes, setDates }
                         </ul>
                     </div>
                     <div className="reserve-container">
-                        <button aria-label="reserve button" type="button" className="yellow-rounded lead-text" onClick={() => setConfirmation(true)}>
+                        <button aria-label="reserve button" title="Reserve" type="button" className="yellow-rounded lead-text" onClick={() => setConfirmation(true)}>
                             Reserve
                         </button>
                     </div>

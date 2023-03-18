@@ -13,7 +13,7 @@ export default function Header() {
                 <h4 className="subtitle">
                     Savor the flavor of the Mediterranean at Little Lemon - where every bite is a burst of sunshine!
                 </h4>
-                <button className="yellow-rounded paragraph" onClick={() => navigate('/book')} >Reserve</button>
+                <button className="yellow-rounded paragraph mt-9" onClick={() => navigate('/book')} >Reserve</button>
             </div>
             <img src={RestaurantPhoto} alt="Restaurant" height="334" />
         </header>

@@ -2,11 +2,11 @@
     padding: 5rem;
     padding-top: 1rem;
     margin: auto;
-    width: fit-content
+    width: fit-content;
 }
 
 #testimonials-grid {
-    padding: 4rem 15rem;
+    padding: 4rem 13rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -61,4 +61,41 @@
 
 .fourth {
     grid-area: fourth;
+}
+
+@media screen and (max-width: 720px) {
+    #testimonials {
+        margin-bottom: 12rem;
+        padding: 0;
+    }
+
+    #testimonials-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "first"
+            "second"
+            "third"
+            "fourth";
+        height: 100%;
+        gap: 5%;
+        padding: 2rem 0;
+    }
+}
+
+
+@media screen and (min-width: 720px) and (max-width: 1200px) {
+    #testimonials {
+        width: auto;
+        padding: 0;
+    }
+
+    #testimonials > h2 {
+        margin-left: 1rem;
+    }
+
+    #testimonials-grid {
+        padding: 2rem 0;
+        gap: 10%;
+    }
 }

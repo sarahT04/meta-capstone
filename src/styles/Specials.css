@@ -4,7 +4,7 @@
     margin: auto;
 }
 
-#specials > h2 {
+#specials>h2 {
     margin-bottom: 1rem;
 }
 
@@ -15,8 +15,8 @@
 
 .specials-description {
     margin-top: 10px;
-    width: 320px;
     text-align: justify;
+    width: 300px;
 }
 
 .price {
@@ -25,12 +25,25 @@
 
 .specials-card>img {
     object-fit: cover;
-    width: 320px;
     height: 266px;
     margin-bottom: 0.5rem;
+    width: 300px;
 }
 
 @media screen and (max-width: 720px) {
+    #specials {
+        padding: 0;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        padding: 0 1%;
+    }
+
+    #specials-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1200px) {
     #specials-wrapper {
         flex-direction: column;
     }
